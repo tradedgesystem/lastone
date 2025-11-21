@@ -1,0 +1,6 @@
+This placeholder text exists because the build environment blocks network access. Please download the official Stockfish WASM binary and overwrite this file:
+
+1. Download: https://github.com/official-stockfish/Stockfish/releases/latest/download/stockfish.wasm
+2. Save it as stockfish.wasm in the extension root (same folder as manifest.json).
+
+No code changes are needed after placing the binary.
