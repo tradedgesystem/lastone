@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Chess Assistant",
+  "description": "Analyze live chess.com games offline with embedded Stockfish and overlay guidance.",
+  "version": "1.0.0",
+  "permissions": [],
+  "host_permissions": ["https://www.chess.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.chess.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "engine.js",
+        "stockfish-worker.js",
+        "lib/stockfish.js",
+        "stockfish.wasm",
+        "styles.css",
+        "icon-32.svg",
+        "icon-48.svg",
+        "icon-128.svg"
+      ],
+      "matches": ["https://www.chess.com/*"]
+    }
+  ],
+  "icons": {
+    "32": "icon-32.svg",
+    "48": "icon-48.svg",
+    "128": "icon-128.svg"
+  }
+}
